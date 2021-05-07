@@ -35,4 +35,8 @@ export class HeroDetailComponent implements OnInit {
     window.history.back();
   }
 
+  save(): void {
+    this.heroService.updateHero(this.hero).subscribe(() => this.goBack())
+  }
+
 }
